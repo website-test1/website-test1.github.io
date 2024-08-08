@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <!-- <link rel="icon" href="favicon.ico" sise="32x32" />
+		<link
+			rel="icon"
+			href="img/icons/favicon-logo-200.svg"
+			type="image/svg+xml"
+		/>
+		<link rel="apple-touch-icon" href="img/icons/favicon-logo-180.png" />
+		<link rel="manifest" href="favic.webmanifest" /> -->
+    <!-- /*favicon -->
+    <title>База отдыха ДОН-2</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <!-- Jarallax CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css" rel="stylesheet" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <wrapper class="wrapper">
+      <header class="header position-relative">
+        <!-- navbar -->
+        <nav class="navbar fixed-top navbar-dark navbar-expand-xl navbar-id p-0 m-0">
+          <div class="container py-1">
+            <a href="#" class="navbar-brand fw-medium"><img src="" alt="" />База отдыха ДОН</a>
+            <a class="fw-medium px-4 text-decoration-none phone-link-navbar-brand" href="tel:+79023621179"
+              ><i class="bi-telephone-fill me-2"></i>8(902) 362-11-79</a
+            >
+
+            <button
+              class="navbar-toggler shadow-none border-0"
+              type="button"
+              data-bs-target="#navbarNav"
+              data-bs-toggle="collapse"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle Navbar">
+              <span class=""><i class="bi bi-list" style="font-size: 2rem; color: var(--color-1)"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ul-navdar">
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-uppercase">О нас</a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://база-отдыха-дон.рф/domiki-do-3#do3k" class="nav-link text-uppercase">Проживание</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-uppercase">Услуги</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-uppercase">кафе</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link map-link"><i class="bi bi-geo-alt icon__map-link"></i> х.Вертячий</a>
+                </li>
+              </ul>
+              <div class="d-flex block-btn-navbar nav-item h-100">
+                <a class="fw-medium px-4 text-decoration-none phone-link-navbar" href="tel:+79023621179"
+                  ><i class="bi-telephone-fill me-2"></i>8(902) 362-11-79</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- /* navbar -->
+        <div class="container position-relative">
+          <div class="row align-items-center vh-100 position-relative">
+            <div class="header__content col-lg-4 col-12 text-center">
+              <h1 class="text-uppercase header__title text-center">
+                отдых на базе<br />
+                <span class="text-id">дон</span>
+              </h1>
+              <div class="header__text__anim mt-3">
+                <span class="text">.....</span>
+              </div>
+              <a class="btn btn-outline-warning btn-body btn-lg fw-medium rounded-1 mt-4 btn-header" href="#">
+                Бронировать
+              </a>
+            </div>
+            <div class="col-lg-7 col-12 header__video__container mx-auto">
+              <!-- <div
+								id="carouselExampleAutoplaying"
+								class="carousel slide carousel-dark"
+								data-bs-ride="carousel"
+								data-bs-pause="false"
+							>
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<img
+											src="img/photo_2022-06-30_17-.jpg"
+											class="d-block w-100 h-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item">
+										<img
+											src="img/IMG_6142.jpeg"
+											class="d-block w-100 h-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item">
+										<img
+											src="img/photo_2022-03-19_18-.jpg"
+											class="d-block w-100 h-100"
+											alt="..."
+										/>
+									</div>
+								</div>
+								<button
+									class="carousel-control-prev"
+									type="button"
+									data-bs-target="#carouselExampleAutoplaying"
+									data-bs-slide="prev"
+								>
+									<span
+										class="carousel-control-prev-icon"
+										aria-hidden="true"
+									></span>
+									<span class="visually-hidden">Предыдущий</span>
+								</button>
+								<button
+									class="carousel-control-next"
+									type="button"
+									data-bs-target="#carouselExampleAutoplaying"
+									data-bs-slide="next"
+								>
+									<span
+										class="carousel-control-next-icon"
+										aria-hidden="true"
+									></span>
+									<span class="visually-hidden">Следующий</span>
+								</button>
+							</div> -->
+              <video pip="false" disablePictureInPicture loop muted autoplay playsinline class="header__video__bg">
+                <source src="" type="video/webm" />
+                <source src="video-header-2.mp4" type="video/mp4" />
+
+                Ваш браузер не поддерживает встроенные видео :(
+              </video>
+            </div>
+          </div>
+          <div class="position-absolute z-3 header-socials-block">
+            <a target="_blank" href="https://www.youtube.com/@englishindeedschool8012"><i class="bi bi-youtube"></i></a>
+            <a target="_blank" href="https://t.me/Englishindeedscool"><i class="bi bi-telegram"></i></a>
+          </div>
+        </div>
+      </header>
+
+      <main class="main jarallax" data-jarallax data-speed=".2" style="background-image: url(img/main-bg1.jpeg)">
+        <section class="sale">
+          <div class="row text-center d-none"><h2>Наши акции</h2></div>
+          <div class="">
+            <div class="swiper swiper-sale">
+              <div class="swiper-wrapper swiper-wrapper-sale">
+                <div class="swiper-slide swiper-slide-sale">
+                  <p>При бронировании от 5 суток <br /><span>скидка 5%</span></p>
+                  <img src="img/sale/booking-5-days.jpg" alt="" />
+                </div>
+                <div class="swiper-slide swiper-slide-sale">
+                  <p>
+                    В День Рождения <br />
+                    <span>скидка 5%</span>
+                  </p>
+                  <img src="img/sale/birthday.jpg" alt="" />
+                </div>
+                <div class="swiper-slide swiper-slide-sale">
+                  <p>Молодожёнам <br /><span>15% скидка</span></p>
+                  <img src="img/sale/wedding.jpg" alt="" />
+                </div>
+                <div class="swiper-slide swiper-slide-sale">
+                  <p>с 1 мая по 25 сентября <br /><span>завтрак на двоих в подарок</span></p>
+                  <img src="img/sale/breakfast.jpg" alt="" />
+                </div>
+                <div class="swiper-slide swiper-slide-sale">
+                  <p>С 1 октября по 15 ноября <br />на все домики<br /><span>скидка 7% </span><br /></p>
+
+                  <img src="img/sale/house-fon.jpg" alt="" />
+                </div>
+                <div class="swiper-slide swiper-slide-sale">
+                  <p><span>Действует накопительная карта лояльности</span><br /></p>
+
+                  <img src="img/sale/forest-rive.jpg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-pagination pagination-sale"></div>
+            </div>
+          </div>
+        </section>
+        <section class="rooms">
+          <div class="container">
+            <div class="row">
+              <h2 class="text-uppercase text-center mb-5">выбрать где отдохнуть</h2>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 justify-content-center">
+              <div class="col">
+                <div class="card card-swiper">
+                  <div class="swiper swiper-rooms">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide swiper-slide-rooms">
+                        <img src="img/rooms/do-3000/5.jpg" />
+                      </div>
+                      <div class="swiper-slide swiper-slide-rooms">
+                        <img src="img/rooms/do-3000/19.jpg" />
+                      </div>
+                      <div class="swiper-slide swiper-slide-rooms">
+                        <img src="img/rooms/do-3000/55555.jpg" />
+                      </div>
+                      <div class="swiper-slide swiper-slide-rooms">
+                        <img src="img/rooms/do-3000/97.jpg" />
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination pagination-rooms"></div>
+                  </div>
+                  <div class="card-body card-body-rooms">
+                    <h5 class="card-title fs-4">Дома до 3000 руб</h5>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <a class="text-decoration-none btn btn-more" href="#"><span>Подробнее</span></a>
+                      <a class="btn btn-card-rooms" href="#">Забронировать</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card card-swiper">
+                  <div class="swiper swiper-rooms">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide swiper-slide-rooms">
+                        <img src="img/rooms/4000-6000/11.jpg" />
+                      </div>
+                      <div class="swiper-slide swiper-slide-rooms">
+                        <img src="img/rooms/4000-6000/22.jpg" />
+                      </div>
+                      <div class="swiper-slide swiper-slide-rooms">
+                        <img src="img/rooms/4000-6000/44.jpg" />
+                      </div>
+                      <div class="swiper-slide swiper-slide-rooms">
+                        <img src="img/rooms/4000-6000/6.jpg" />
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination pagination-rooms"></div>
+                  </div>
+                  <div class="card-body card-body-rooms">
+                    <h5 class="card-title fs-4">Дома 4000 - 6000 руб</h5>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <a class="text-decoration-none btn btn-more" href="#"><span>Подробнее</span></a>
+                      <a class="btn btn-card-rooms" href="#">Забронировать</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card card-swiper">
+                  <div class="swiper swiper-rooms">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide swiper-slide-rooms">
+                        <img src="img/rooms/ot-7000/144.jpg" />
+                      </div>
+                      <div class="swiper-slide swiper-slide-rooms">
+                        <img src="img/rooms/ot-7000/122.jpg" />
+                      </div>
+                      <div class="swiper-slide swiper-slide-rooms">
+                        <img src="img/rooms/ot-7000/10.jpg" />
+                      </div>
+                      <div class="swiper-slide swiper-slide-rooms">
+                        <img src="img/rooms/ot-7000/3.jpg" />
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination pagination-rooms"></div>
+                  </div>
+                  <div class="card-body card-body-rooms">
+                    <h5 class="card-title fs-4">Дома от 7000 руб</h5>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <a class="text-decoration-none btn btn-more" href="#"><span>Подробнее</span></a>
+                      <a class="btn btn-card-rooms" href="#">Забронировать</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="our-advantages">
+          <div class="container">
+            <div class="row">
+              <h2 class="text-uppercase text-center mb-5">нас выбирают</h2>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-2 g-4">
+              <div class="col">
+                <div class="card" style="">
+                  <div class="card-body">
+                    <p class="card-text">
+                      <span class="">За</span> Небольшой пример текста, который должен основываться на названии карточки
+                      и составлять основную часть содержимого карточки.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="">
+                  <div class="card-body">
+                    <p class="card-text">
+                      <span>За</span>Небольшой пример текста, который должен основываться на названии карточки и
+                      составлять основную часть содержимого карточки.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="">
+                  <div class="card-body">
+                    <p class="card-text">
+                      <span>За</span>Небольшой пример текста, который должен основываться на названии карточки и
+                      составлять основную часть содержимого карточки.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="">
+                  <div class="card-body">
+                    <p class="card-text">
+                      <span>За</span>Небольшой пример текста, который должен основываться на названии карточки и
+                      составлять основную часть содержимого карточки.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- <section class="section-2 jarallax" data-jarallax data-speed=".2" style="background-image: url(img/1444.jpg)">
+        <div class="container">
+          <div class="row">
+            <h2 class="text-uppercase text-center">о нас</h2>
+          </div>
+          <div class="row">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt aspernatur libero delectus tenetur non
+              hic nisi repellendus ipsa, magnam quo, cupiditate eius reprehenderit neque accusantium fugiat molestias
+              itaque eveniet. Inventore. Dolore harum nulla saepe animi unde aspernatur eligendi. Illum commodi non
+              quibusdam officiis asperiores incidunt eius error eum. Dolor aspernatur officiis laboriosam molestiae
+              aliquid labore veniam illum alias magnam explicabo? Assumenda et aperiam aliquam blanditiis voluptas
+              laudantium porro, quidem minus? Voluptatibus necessitatibus ab fuga eos ea libero assumenda delectus, quis
+              aliquid voluptatem ut excepturi hic nihil aliquam explicabo pariatur repellat? Consequuntur, ipsam. Non
+              deleniti fuga quas amet voluptatibus rem incidunt nam maiores in! Tenetur ad commodi porro earum inventore
+              unde quidem distinctio eum? Impedit, facere labore ut tempore debitis voluptatibus? Laboriosam ea magnam
+              laborum libero in labore praesentium voluptatum quod dicta voluptas, deleniti doloribus similique, ipsa
+              architecto tempore sit beatae dolorum quas quia corporis. Distinctio sapiente commodi illum inventore
+              reiciendis? Explicabo facere amet quibusdam quas similique harum nesciunt enim vero eum perspiciatis!
+              Maiores impedit tempora, debitis adipisci optio odio reprehenderit fugit non consequatur dolorum eveniet
+              placeat recusandae perferendis alias similique! Est, harum alias. Repudiandae vero ex numquam in ea
+              placeat aperiam doloremque sint reprehenderit dolor enim optio quaerat recusandae alias perferendis,
+              inventore eius necessitatibus eveniet suscipit a corrupti quam ipsum? Laboriosam perferendis nobis quas
+              reiciendis, ex ad eum facere omnis, odit accusantium animi sequi cum nostrum, iure obcaecati rerum alias
+              nihil. Impedit earum ducimus veniam officia maxime! Illo, non veritatis. Ad blanditiis quam inventore
+              reprehenderit nostrum debitis. Magni dolores, maxime quam nisi quisquam debitis. Cupiditate beatae
+              quisquam ut voluptates. Hic enim voluptates perspiciatis exercitationem esse at, dolorum delectus?
+              Cupiditate, vel. Fugit ex, error nostrum reprehenderit hic soluta veniam pariatur beatae dicta natus aut
+              necessitatibus ipsa harum exercitationem earum cupiditate recusandae atque, animi itaque vero quas quasi
+              excepturi voluptate! Accusantium, dolorem?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odit laboriosam itaque accusantium
+              quaerat ratione provident explicabo facilis! Voluptate dolor veritatis, ipsum consequuntur repudiandae
+              distinctio dolore excepturi beatae dolorem vel. Earum error tempore quo eaque, quisquam assumenda ipsam.
+              Veritatis ex architecto quas quo neque deserunt quam blanditiis incidunt eos corporis soluta quisquam,
+              voluptatibus quae iure repellat, dicta, laborum quasi voluptas! Ipsum molestiae quas corrupti beatae
+              libero laborum quaerat temporibus harum nobis? Dignissimos illo repellendus commodi quaerat ad, iure
+              maxime, esse perferendis, necessitatibus sint obcaecati culpa ex similique non repudiandae consectetur?
+              Possimus, non? Voluptates eos rem doloribus debitis saepe nihil perferendis vero minima itaque! Beatae
+              error aut officiis earum nostrum sed recusandae esse, saepe quis unde porro, eaque vero! Tempora, ex.
+              Expedita quos quam quod neque. Rem repellendus accusamus voluptatibus. Aspernatur, omnis architecto
+              cupiditate vel quo expedita! Ducimus at maxime amet sapiente. Laudantium suscipit in hic. Numquam, labore
+              sed? Quaerat, molestias? Molestiae cupiditate consequatur nemo ducimus eveniet quibusdam ipsam obcaecati?
+              Numquam cumque ipsum provident, blanditiis reprehenderit voluptatum vitae adipisci fugiat maxime eos.
+              Recusandae ratione, repellendus quo natus alias esse accusantium quis! Adipisci quas nisi inventore
+              assumenda optio molestiae dolores nam! Ullam, amet nisi? Nihil recusandae sint nulla! Ducimus ipsa eveniet
+              doloribus soluta exercitationem numquam impedit nam. Voluptatibus ullam facilis placeat dicta! Magni
+              velit, voluptatem ut libero mollitia minima sequi dolor, culpa sit hic voluptate numquam aperiam
+              laboriosam consequatur. Similique in quis quas, ducimus nisi provident, aliquam ipsum quaerat, aut enim
+              obcaecati. At animi nobis commodi est vitae architecto ullam doloremque quis rerum illo, optio officia
+              voluptatem, iure officiis totam non et nemo, repudiandae magni delectus. Doloremque nostrum explicabo
+              harum ratione alias? Nemo reiciendis reprehenderit accusamus dolor saepe, in fuga rerum sequi. Porro ut
+              aspernatur autem tempora nihil iste fuga doloremque officia, accusantium, deserunt a libero soluta nisi
+              natus commodi nesciunt blanditiis.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odit laboriosam itaque accusantium
+              quaerat ratione provident explicabo facilis! Voluptate dolor veritatis, ipsum consequuntur repudiandae
+              distinctio dolore excepturi beatae dolorem vel. Earum error tempore quo eaque, quisquam assumenda ipsam.
+              Veritatis ex architecto quas quo neque deserunt quam blanditiis incidunt eos corporis soluta quisquam,
+              voluptatibus quae iure repellat, dicta, laborum quasi voluptas! Ipsum molestiae quas corrupti beatae
+              libero laborum quaerat temporibus harum nobis? Dignissimos illo repellendus commodi quaerat ad, iure
+              maxime, esse perferendis, necessitatibus sint obcaecati culpa ex similique non repudiandae consectetur?
+              Possimus, non? Voluptates eos rem doloribus debitis saepe nihil perferendis vero minima itaque! Beatae
+              error aut officiis earum nostrum sed recusandae esse, saepe quis unde porro, eaque vero! Tempora, ex.
+              Expedita quos quam quod neque. Rem repellendus accusamus voluptatibus. Aspernatur, omnis architecto
+              cupiditate vel quo expedita! Ducimus at maxime amet sapiente. Laudantium suscipit in hic. Numquam, labore
+              sed? Quaerat, molestias? Molestiae cupiditate consequatur nemo ducimus eveniet quibusdam ipsam obcaecati?
+              Numquam cumque ipsum provident, blanditiis reprehenderit voluptatum vitae adipisci fugiat maxime eos.
+              Recusandae ratione, repellendus quo natus alias esse accusantium quis! Adipisci quas nisi inventore
+              assumenda optio molestiae dolores nam! Ullam, amet nisi? Nihil recusandae sint nulla! Ducimus ipsa eveniet
+              doloribus soluta exercitationem numquam impedit nam. Voluptatibus ullam facilis placeat dicta! Magni
+              velit, voluptatem ut libero mollitia minima sequi dolor, culpa sit hic voluptate numquam aperiam
+              laboriosam consequatur. Similique in quis quas, ducimus nisi provident, aliquam ipsum quaerat, aut enim
+              obcaecati. At animi nobis commodi est vitae architecto ullam doloremque quis rerum illo, optio officia
+              voluptatem, iure officiis totam non et nemo, repudiandae magni delectus. Doloremque nostrum explicabo
+              harum ratione alias? Nemo reiciendis reprehenderit accusamus dolor saepe, in fuga rerum sequi. Porro ut
+              aspernatur autem tempora nihil iste fuga doloremque officia, accusantium, deserunt a libero soluta nisi
+              natus commodi nesciunt blanditiis.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odit laboriosam itaque accusantium
+              quaerat ratione provident explicabo facilis! Voluptate dolor veritatis, ipsum consequuntur repudiandae
+              distinctio dolore excepturi beatae dolorem vel. Earum error tempore quo eaque, quisquam assumenda ipsam.
+              Veritatis ex architecto quas quo neque deserunt quam blanditiis incidunt eos corporis soluta quisquam,
+              voluptatibus quae iure repellat, dicta, laborum quasi voluptas! Ipsum molestiae quas corrupti beatae
+              libero laborum quaerat temporibus harum nobis? Dignissimos illo repellendus commodi quaerat ad, iure
+              maxime, esse perferendis, necessitatibus sint obcaecati culpa ex similique non repudiandae consectetur?
+              Possimus, non? Voluptates eos rem doloribus debitis saepe nihil perferendis vero minima itaque! Beatae
+              error aut officiis earum nostrum sed recusandae esse, saepe quis unde porro, eaque vero! Tempora, ex.
+              Expedita quos quam quod neque. Rem repellendus accusamus voluptatibus. Aspernatur, omnis architecto
+              cupiditate vel quo expedita! Ducimus at maxime amet sapiente. Laudantium suscipit in hic. Numquam, labore
+              sed? Quaerat, molestias? Molestiae cupiditate consequatur nemo ducimus eveniet quibusdam ipsam obcaecati?
+              Numquam cumque ipsum provident, blanditiis reprehenderit voluptatum vitae adipisci fugiat maxime eos.
+              Recusandae ratione, repellendus quo natus alias esse accusantium quis! Adipisci quas nisi inventore
+              assumenda optio molestiae dolores nam! Ullam, amet nisi? Nihil recusandae sint nulla! Ducimus ipsa eveniet
+              doloribus soluta exercitationem numquam impedit nam. Voluptatibus ullam facilis placeat dicta! Magni
+              velit, voluptatem ut libero mollitia minima sequi dolor, culpa sit hic voluptate numquam aperiam
+              laboriosam consequatur. Similique in quis quas, ducimus nisi provident, aliquam ipsum quaerat, aut enim
+              obcaecati. At animi nobis commodi est vitae architecto ullam doloremque quis rerum illo, optio officia
+              voluptatem, iure officiis totam non et nemo, repudiandae magni delectus. Doloremque nostrum explicabo
+              harum ratione alias? Nemo reiciendis reprehenderit accusamus dolor saepe, in fuga rerum sequi. Porro ut
+              aspernatur autem tempora nihil iste fuga doloremque officia, accusantium, deserunt a libero soluta nisi
+              natus commodi nesciunt blanditiis.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odit laboriosam itaque accusantium
+              quaerat ratione provident explicabo facilis! Voluptate dolor veritatis, ipsum consequuntur repudiandae
+              distinctio dolore excepturi beatae dolorem vel. Earum error tempore quo eaque, quisquam assumenda ipsam.
+              Veritatis ex architecto quas quo neque deserunt quam blanditiis incidunt eos corporis soluta quisquam,
+              voluptatibus quae iure repellat, dicta, laborum quasi voluptas! Ipsum molestiae quas corrupti beatae
+              libero laborum quaerat temporibus harum nobis? Dignissimos illo repellendus commodi quaerat ad, iure
+              maxime, esse perferendis, necessitatibus sint obcaecati culpa ex similique non repudiandae consectetur?
+              Possimus, non? Voluptates eos rem doloribus debitis saepe nihil perferendis vero minima itaque! Beatae
+              error aut officiis earum nostrum sed recusandae esse, saepe quis unde porro, eaque vero! Tempora, ex.
+              Expedita quos quam quod neque. Rem repellendus accusamus voluptatibus. Aspernatur, omnis architecto
+              cupiditate vel quo expedita! Ducimus at maxime amet sapiente. Laudantium suscipit in hic. Numquam, labore
+              sed? Quaerat, molestias? Molestiae cupiditate consequatur nemo ducimus eveniet quibusdam ipsam obcaecati?
+              Numquam cumque ipsum provident, blanditiis reprehenderit voluptatum vitae adipisci fugiat maxime eos.
+              Recusandae ratione, repellendus quo natus alias esse accusantium quis! Adipisci quas nisi inventore
+              assumenda optio molestiae dolores nam! Ullam, amet nisi? Nihil recusandae sint nulla! Ducimus ipsa eveniet
+              doloribus soluta exercitationem numquam impedit nam. Voluptatibus ullam facilis placeat dicta! Magni
+              velit, voluptatem ut libero mollitia minima sequi dolor, culpa sit hic voluptate numquam aperiam
+              laboriosam consequatur. Similique in quis quas, ducimus nisi provident, aliquam ipsum quaerat, aut enim
+              obcaecati. At animi nobis commodi est vitae architecto ullam doloremque quis rerum illo, optio officia
+              voluptatem, iure officiis totam non et nemo, repudiandae magni delectus. Doloremque nostrum explicabo
+              harum ratione alias? Nemo reiciendis reprehenderit accusamus dolor saepe, in fuga rerum sequi. Porro ut
+              aspernatur autem tempora nihil iste fuga doloremque officia, accusantium, deserunt a libero soluta nisi
+              natus commodi nesciunt blanditiis.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odit laboriosam itaque accusantium
+              quaerat ratione provident explicabo facilis! Voluptate dolor veritatis, ipsum consequuntur repudiandae
+              distinctio dolore excepturi beatae dolorem vel. Earum error tempore quo eaque, quisquam assumenda ipsam.
+              Veritatis ex architecto quas quo neque deserunt quam blanditiis incidunt eos corporis soluta quisquam,
+              voluptatibus quae iure repellat, dicta, laborum quasi voluptas! Ipsum molestiae quas corrupti beatae
+              libero laborum quaerat temporibus harum nobis? Dignissimos illo repellendus commodi quaerat ad, iure
+              maxime, esse perferendis, necessitatibus sint obcaecati culpa ex similique non repudiandae consectetur?
+              Possimus, non? Voluptates eos rem doloribus debitis saepe nihil perferendis vero minima itaque! Beatae
+              error aut officiis earum nostrum sed recusandae esse, saepe quis unde porro, eaque vero! Tempora, ex.
+              Expedita quos quam quod neque. Rem repellendus accusamus voluptatibus. Aspernatur, omnis architecto
+              cupiditate vel quo expedita! Ducimus at maxime amet sapiente. Laudantium suscipit in hic. Numquam, labore
+              sed? Quaerat, molestias? Molestiae cupiditate consequatur nemo ducimus eveniet quibusdam ipsam obcaecati?
+              Numquam cumque ipsum provident, blanditiis reprehenderit voluptatum vitae adipisci fugiat maxime eos.
+              Recusandae ratione, repellendus quo natus alias esse accusantium quis! Adipisci quas nisi inventore
+              assumenda optio molestiae dolores nam! Ullam, amet nisi? Nihil recusandae sint nulla! Ducimus ipsa eveniet
+              doloribus soluta exercitationem numquam impedit nam. Voluptatibus ullam facilis placeat dicta! Magni
+              velit, voluptatem ut libero mollitia minima sequi dolor, culpa sit hic voluptate numquam aperiam
+              laboriosam consequatur. Similique in quis quas, ducimus nisi provident, aliquam ipsum quaerat, aut enim
+              obcaecati. At animi nobis commodi est vitae architecto ullam doloremque quis rerum illo, optio officia
+              voluptatem, iure officiis totam non et nemo, repudiandae magni delectus. Doloremque nostrum explicabo
+              harum ratione alias? Nemo reiciendis reprehenderit accusamus dolor saepe, in fuga rerum sequi. Porro ut
+              aspernatur autem tempora nihil iste fuga doloremque officia, accusantium, deserunt a libero soluta nisi
+              natus commodi nesciunt blanditiis.
+            </p>
+          </div>
+        </div>
+      </section> -->
+      <footer class="footer pt-3">
+        <div class="container">
+          <div class="row justify-content-around">
+            <div class="col-lg-3 col-sm-6">
+              <div class="single-box flex-column d-flex justify-content-center align-items-center">
+                <img src="" class="d-flex logo-footer" alt="" />
+                <h2 class="text-uppercase d-flex"></h2>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="single-box">
+                <a href="#" class="text-decoration-none">
+                  <h2>Главная</h2>
+                </a>
+                <ul>
+                  <li><a href="#our-courses">Курсы</a></li>
+                  <li><a href="#about-us">О нас</a></li>
+                  <li><a href="contacts.html">Контакты</a></li>
+                  <li><a href="docs.html">Наши сертификаты</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="single-box">
+                <!-- <h2>Domain</h2> -->
+                <p class="adress-text">г. Москва, ул. Озерная, д. 42, БЦ "Озерная", 2 этаж, офис 215</p>
+                <p class="adress-text">
+                  Рядом со ст. метро "Озерная" <br />
+                  (2 минуты), ст. метро "Юго-Западная"(10минут)
+                </p>
+                <p class="adress-text">
+                  График работы: <br />
+                  Пн-Сб с 9:00 до 20:00
+                </p>
+                <a class="text-decoration-none phone-link-navbar phone-link-navbar-footer" href="tel:+79067751938">
+                  <i class="bi-telephone-fill me-2"></i>8(906) 775-19-38</a
+                >
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="single-box">
+                <h2>"ENGLISH INDEED"</h2>
+                <p class="text-uppercase">выучить английский легко</p>
+                <div class="input-group mb-3">
+                  <button
+                    class="btn btn-outline-warning btn-body fw-medium border-2 px-3"
+                    type="submit"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    Записаться на курсы
+                  </button>
+                </div>
+                <h2>Здесь мы всегда на связи</h2>
+                <p class="socials">
+                  <a target="_blank" href="https://m.vk.com/english_indeed"><i class="fa-brands fa-vk"></i></a>
+                  <a target="_blank" href="https://www.youtube.com/@englishindeedschool8012"
+                    ><i class="bi bi-youtube"></i
+                  ></a>
+                  <a target="_blank" href="https://t.me/Englishindeedscool"><i class="fa-brands fa-telegram"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row freepik">
+            <div class="col-12 flex-column d-flex align-items-end freepic mt-3">
+              <a href="https://ru.freepik.com/free-psd/leisure-and-wildlife-landing-page_13515931.htm"
+                >designed by freepik</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </wrapper>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
