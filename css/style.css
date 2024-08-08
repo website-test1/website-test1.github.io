@@ -53,8 +53,7 @@ h1 {
 .navbar {
   padding: 15px;
 }
-.navbar-id {
-}
+
 .navbar-collapse {
   background: #397277;
 }
@@ -208,8 +207,7 @@ header {
   font-size: 35px;
   margin: 0 10px;
 }
-.header-socials-block {
-}
+
 /* animation-header */
 /* header h1 span {
 	opacity: 0;
