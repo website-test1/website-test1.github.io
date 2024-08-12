@@ -53,8 +53,8 @@ h1 {
 .navbar {
   padding: 15px;
 }
-
-.navbar-collapse {
+.navbar-collapse,
+nav .container-fluid {
   background: #397277;
 }
 .navbar-brand {
@@ -207,7 +207,6 @@ header {
   font-size: 35px;
   margin: 0 10px;
 }
-
 /* animation-header */
 /* header h1 span {
 	opacity: 0;
@@ -367,6 +366,39 @@ section {
   font-size: calc(var(--index) * 1.5);
   font-weight: 600;
 }
+.our-advantages .card-body {
+  position: relative;
+  min-height: 190px;
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+}
+.our-advantages .card-body:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+.our-advantages .card-body:before:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
 
 /* swiper-rooms */
 .card-swiper,
@@ -393,7 +425,7 @@ section {
   background-size: cover;
   width: 100%;
   height: 100%;
-  padding: 20px 0;
+  padding: 5px 0;
 }
 
 .swiper-slide img {
@@ -429,14 +461,44 @@ section {
 .btn-card-rooms {
   font-weight: 600;
   color: var(--color-hover);
-  padding: 5px calc(var(--index) * 0.5);
+  padding: 10px calc(var(--index) * 0.5);
   background-color: var(--color-1);
   transition: all 0.5s;
 }
 .btn-more {
   color: var(--color-1);
 }
+/* ---услуги--- */
+/* ---услуги-end-- */
 /* ---------main-end------- */
+
+/* footer */
+footer a {
+  color: var(--color-text-header);
+  text-decoration: none;
+}
+footer ul {
+  list-style: none;
+}
+footer .letter {
+  text-shadow: 25px 0 35px rgba(0, 0, 0, 0.6);
+  /* margin-left: calc(var(--index) * -1); */
+  font-weight: 900;
+  font-size: calc(var(--index) * 3);
+  letter-spacing: 1px;
+  color: var(--color-1);
+}
+.single-box {
+  padding-bottom: 20px;
+}
+.phone-link-navbar-footer {
+  color: var(--color-1);
+}
+.socials a {
+  font-size: 40px;
+  margin-right: 10px;
+}
+/* footer-end */
 
 /* media-css */
 @media (max-width: 1200px) {
@@ -463,9 +525,7 @@ section {
   .nav-link {
     font-size: 20px;
   }
-  nav .container {
-    background: var(--border-color);
-  }
+
   .header__video__container {
     border-left: 0;
     border-right: 0;
@@ -505,7 +565,17 @@ section {
     }
   }
 }
-
+@media (max-width: 768px) {
+  .header__content .letter {
+    font-size: calc(var(--index) * 6.5);
+  }
+  .our-advantages .card-text span {
+    font-size: calc(var(--index) * 2.5);
+  }
+  footer .letter {
+    font-size: calc(var(--index) * 4.5);
+  }
+}
 @media (min-width: 1200px) {
   .phone-link-navbar-brand {
     display: none;
@@ -581,6 +651,10 @@ section {
     border: 1px solid #fbab02;
     background: var(--border-color);
   }
+  .our-advantages .card:hover {
+    scale: 1.02;
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 /* media-css-end */
@@ -597,4 +671,15 @@ main span {
 }
 .active-span {
   background-size: 100% 100%;
+}
+/* ------------- */
+
+.scroll-items {
+  opacity: 0;
+  transform: translateY(250px);
+  transition: opacity .5s, transform 1.5s;
+}
+.box-active {
+  transform: translateY(0);
+  opacity: 1;
 }

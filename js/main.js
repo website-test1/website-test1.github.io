@@ -70,28 +70,8 @@ tl2.from('.navbar-id', {
 // 	},
 // })
 // ======================
-gsap.to('.header__content', {
-  scale: 0.05,
-  ease: 'ease',
-  scrollTrigger: {
-    trigger: 'header',
-    scrub: 1,
-    start: 'top top',
-    end: 'bottom',
-  },
-})
-gsap.to('.header__video__container', {
-  scale: 2,
-  ease: 'ease',
-  scrollTrigger: {
-    trigger: 'header',
-    scrub: 1,
-    start: 'top top',
-    end: 'bottom',
-  },
-})
 ScrollTrigger.create({
-  start: 'top top',
+  start: '5% top',
   trigger: 'header',
   // markers: true,
   toggleClass: {
@@ -99,16 +79,43 @@ ScrollTrigger.create({
     className: 'header-active',
   },
 })
+const tl3 = gsap.timeline()
+tl3
+  .to('.header', {
+    scrollTrigger: {
+      trigger: '.header',
+      start: '0 0',
+      scrub: true,
+    },
+  })
+  .to('.header__content', {
+    scrollTrigger: {
+      trigger: 'header',
+      scrub: 1,
+      start: '5% top',
+    },
+    scale: 0.05,
+  })
+  .to('.header__video__container', {
+    scrollTrigger: {
+      trigger: 'header',
+      scrub: true,
+      start: '5% top',
+    },
+    scale: 2,
+  })
+// ----------------
+
 // ======================
-ScrollTrigger.create({
-  start: 'top 80%',
-  trigger: '.main',
-  // markers: true,
-  toggleClass: {
-    targets: '.navbar-id',
-    className: 'navbar-id-active',
-  },
-})
+// ScrollTrigger.create({
+//   start: 'top 80%',
+//   trigger: '.main',
+//   markers: true,
+//   toggleClass: {
+//     targets: '.navbar-id',
+//     className: 'navbar-id-active',
+//   },
+// })
 
 // анимация header-end
 
@@ -179,3 +186,21 @@ var swiperSale = new Swiper('.swiper-sale', {
     },
   },
 })
+// ----------
+
+window.addEventListener('scroll', () => {
+  const scrollItems = document.querySelectorAll('.scroll-items')
+  const scrollAnimation = () => {
+    let windowCenter = window.innerHeight / 2 + window.scrollY
+    scrollItems.forEach(el => {
+      let scrollOffset = el.getBoundingClientRect().top - 400 + window.scrollY
+      if (scrollOffset <= windowCenter) {
+        el.classList.add('box-active')
+      } else {
+        el.classList.remove('box-active')
+      }
+    })
+  }
+  scrollAnimation()
+})
+
