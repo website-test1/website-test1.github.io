@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- favicon -->
-    <!-- <link rel="icon" href="favicon.ico" sise="32x32" />
-		<link
+    <link rel="icon" href="favicon_4.ico" sise="64x64" />
+    <!--<link
 			rel="icon"
 			href="img/icons/favicon-logo-200.svg"
 			type="image/svg+xml"
@@ -13,7 +13,7 @@
 		<link rel="apple-touch-icon" href="img/icons/favicon-logo-180.png" />
 		<link rel="manifest" href="favic.webmanifest" /> -->
     <!-- /*favicon -->
-    <title>База отдыха ДОН-2</title>
+    <title>База отдыха ДОН</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
@@ -24,12 +24,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="css/lightbox.min.css" />
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css?v=1.1" />
   </head>
 
   <body>
     <wrapper class="wrapper">
+      <!-- loader -->
+      <div class="loader"></div>
+      <!-- loader-end -->
       <header class="header position-relative">
         <!-- navbar -->
         <nav class="navbar fixed-top navbar-dark navbar-expand-xl navbar-id p-0 m-0">
@@ -52,19 +57,21 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ul-navdar">
                 <li class="nav-item">
-                  <a href="#" class="nav-link text-uppercase">О нас</a>
+                  <a href="#about" class="nav-link text-uppercase">О нас</a>
                 </li>
                 <li class="nav-item">
-                  <a href="https://база-отдыха-дон.рф/domiki-do-3#do3k" class="nav-link text-uppercase">Проживание</a>
+                  <a href="https://база-отдыха-дон.рф/domiki-do-3#do3k" target="_blank" class="nav-link text-uppercase"
+                    >Проживание</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link text-uppercase">Услуги</a>
+                  <a href="#services" class="nav-link text-uppercase">Услуги</a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link text-uppercase">Кафе-бар</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link map-link"><i class="bi bi-geo-alt icon__map-link"></i> х.Вертячий</a>
+                  <a href="#map" class="nav-link map-link"><i class="bi bi-geo-alt icon__map-link"></i> х.Вертячий</a>
                 </li>
               </ul>
               <div class="d-flex block-btn-navbar nav-item h-100">
@@ -86,7 +93,7 @@
               <div class="header__text__anim mt-3">
                 <span class="text">.....</span>
               </div>
-              <a class="btn btn-outline-warning btn-body btn-lg fw-medium rounded-1 mt-4 btn-header" href="#">
+              <a class="btn btn-outline-warning btn-body btn-lg fw-medium rounded-1 mt-5 btn-header" href="#">
                 Бронировать
               </a>
             </div>
@@ -100,7 +107,8 @@
                 muted
                 autoplay
                 class="header__video__bg">
-                <source src="video-header-2.mp4" type="video/mp4" />
+                <source src="video-header-new.webm" type="video/webm" />
+                <source src="video-header-new.mp4" type="video/mp4" />
                 Ваш браузер не поддерживает встроенные видео :(
               </video>
             </div>
@@ -112,7 +120,11 @@
         </div>
       </header>
 
-      <main class="main jarallax" data-jarallax data-speed=".2" style="background-image: url(img/main-bg1.jpeg)">
+      <main
+        class="main jarallax"
+        data-jarallax
+        data-speed=".2"
+        style="background-image: url(img/main-bg-no-freepik.jpg)">
         <section class="sale">
           <div class="row text-center d-none"><h2>Акции базы отдыха ДОН</h2></div>
           <div class="">
@@ -152,7 +164,7 @@
             </div>
           </div>
         </section>
-        <section class="rooms">
+        <section class="rooms" id="rooms">
           <div class="container">
             <div class="row">
               <h2 class="text-uppercase text-center mb-5">выбрать где отдохнуть</h2>
@@ -183,7 +195,7 @@
                     <h5 class="card-title fs-4">Дома до 3000 руб</h5>
                     <div class="d-flex justify-content-between align-items-center mt-3">
                       <a class="text-decoration-none btn btn-more" href="#"><span>Подробнее</span></a>
-                      <a class="btn btn-card-rooms" href="#">Забронировать</a>
+                      <a class="btn btn-link" href="#">Забронировать</a>
                     </div>
                   </div>
                 </div>
@@ -213,7 +225,7 @@
                     <h5 class="card-title fs-4">Дома 4000 - 6000 руб</h5>
                     <div class="d-flex justify-content-between align-items-center mt-3">
                       <a class="text-decoration-none btn btn-more" href="#"><span>Подробнее</span></a>
-                      <a class="btn btn-card-rooms" href="#">Забронировать</a>
+                      <a class="btn btn-link" href="#">Забронировать</a>
                     </div>
                   </div>
                 </div>
@@ -243,7 +255,7 @@
                     <h5 class="card-title fs-4">Дома от 7000 руб</h5>
                     <div class="d-flex justify-content-between align-items-center mt-3">
                       <a class="text-decoration-none btn btn-more" href="#"><span>Подробнее</span></a>
-                      <a class="btn btn-card-rooms" href="#">Забронировать</a>
+                      <a class="btn btn-link" href="#">Забронировать</a>
                     </div>
                   </div>
                 </div>
@@ -467,12 +479,340 @@
               </div>
             </div>
           </div>
+        </section> -->
+        <section class="about-section" id="about">
+          <div class="container">
+            <div class="row"><h2 class="text-uppercase text-center">познакомтесь с нами</h2></div>
+            <div class="row about mt-5">
+              <div class="col-12">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione libero at ipsam magni voluptates
+                  harum facilis natus sunt perspiciatis accusantium? Nulla pariatur eum culpa optio quia iusto
+                  recusandae beatae nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam architecto
+                  fuga unde, corporis quisquam quam labore nam mollitia quia ut! Illum amet nihil voluptate dolorem
+                  commodi quam, sed tempora consectetur?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione libero at ipsam magni voluptates
+                  harum facilis natus sunt perspiciatis accusantium? Nulla pariatur eum culpa optio quia iusto
+                  recusandae beatae nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam architecto
+                  fuga unde, corporis quisquam quam labore nam mollitia quia ut! Illum amet nihil voluptate dolorem
+                  commodi quam, sed tempora consectetur?
+                </p>
+              </div>
+            </div>
+            <!-- gallery-about -------------------------------------->
+            <div class="row">
+              <div class="grid-gallery grid-gallery-about">
+                <div class="grid-item shadow scroll-items">
+                  <a href="img/lightbox/gallery1/house-don.webp" loading="lazy" data-lightbox="gridImage">
+                    <img src="img/lightbox/gallery1/house-don.webp" loading="lazy" alt="" />
+                  </a>
+                </div>
+                <div class="grid-item shadow scroll-items">
+                  <a href="img/lightbox/gallery1/don1.webp" loading="lazy" data-lightbox="gridImage">
+                    <img src="img/lightbox/gallery1/don1.webp" loading="lazy" alt="" />
+                  </a>
+                </div>
+                <div class="grid-item shadow scroll-items">
+                  <a href="img/lightbox/gallery1/don2.webp" loading="lazy" data-lightbox="gridImage">
+                    <img src="img/lightbox/gallery1/don2.webp" loading="lazy" alt="" />
+                  </a>
+                </div>
+                <div class="grid-item shadow scroll-items">
+                  <a href="img/lightbox/gallery1/don3.webp" loading="lazy" data-lightbox="gridImage">
+                    <img src="img/lightbox/gallery1/don3.webp" loading="lazy" alt="" />
+                  </a>
+                </div>
+                <div class="grid-item shadow scroll-items">
+                  <a href="img/lightbox/gallery1/don4.webp" loading="lazy" data-lightbox="gridImage">
+                    <img src="img/lightbox/gallery1/don4.webp" loading="lazy" alt="" />
+                  </a>
+                </div>
+                <div class="grid-item shadow scroll-items">
+                  <a href="img/lightbox/gallery1/don5.webp" loading="lazy" data-lightbox="gridImage">
+                    <img src="img/lightbox/gallery1/don5.webp" loading="lazy" alt="" />
+                  </a>
+                </div>
+                <div class="grid-item shadow scroll-items">
+                  <a href="img/lightbox/gallery1/don6.webp" loading="lazy" data-lightbox="gridImage">
+                    <img src="img/lightbox/gallery1/don6.webp" loading="lazy" alt="" />
+                  </a>
+                </div>
+                <div class="grid-item shadow scroll-items">
+                  <a href="img/lightbox/gallery1/cafe-bar.jpg" loading="lazy" data-lightbox="gridImage">
+                    <img src="img/lightbox/gallery1/cafe-bar.jpg" loading="lazy" alt="" />
+                  </a>
+                </div>
+                <div class="grid-item shadow scroll-items">
+                  <a href="img/lightbox/gallery1/bathhouse1.webp" loading="lazy" data-lightbox="gridImage">
+                    <img src="img/lightbox/gallery1/bathhouse1.webp" loading="lazy" alt="" />
+                  </a>
+                </div>
+                <div class="grid-item shadow scroll-items">
+                  <a href="img/lightbox/gallery1/bathhouse2.png" loading="lazy" data-lightbox="gridImage">
+                    <img src="img/lightbox/gallery1/bathhouse2.png" loading="lazy" alt="" />
+                  </a>
+                </div>
+                <div class="grid-item shadow scroll-items">
+                  <a href="img/lightbox/gallery1/grill.webp" loading="lazy" data-lightbox="gridImage">
+                    <img src="img/lightbox/gallery1/grill.webp" loading="lazy" alt="" />
+                  </a>
+                </div>
+                <div class="grid-item shadow scroll-items">
+                  <a href="img/lightbox/gallery1/kids-zone.webp" loading="lazy" data-lightbox="gridImage">
+                    <img src="img/lightbox/gallery1/kids-zone.webp" loading="lazy" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- /*gallery-about ---------------------------------->
+            <div class="row mt-5 mb-3"><h3 class="text-center text-uppercase">Отзывы о нас</h3></div>
+            <div class="reviews col-12 scroll-items">
+              <div
+                style="
+                  max-width: 600px;
+                  height: 900px;
+                  overflow: hidden;
+                  position: relative;
+                  margin: 0 auto;
+                  border-radius: 3px;
+                ">
+                <iframe
+                  style="width: 100%; height: 100%; box-sizing: border-box"
+                  src="https://yandex.ru/maps-reviews-widget/53637036694?comments"></iframe
+                ><a
+                  href="https://yandex.ru/maps/org/baza_otdykha_don/53637036694/"
+                  target="_blank"
+                  style="
+                    box-sizing: border-box;
+                    text-decoration: none;
+                    color: #b3b3b3;
+                    font-size: 10px;
+                    font-family: YS Text, sans-serif;
+                    padding: 0 20px;
+                    position: absolute;
+                    bottom: 8px;
+                    width: 100%;
+                    text-align: center;
+                    left: 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: block;
+                    max-height: 14px;
+                    white-space: nowrap;
+                    padding: 0;
+                    box-sizing: border-box;
+                  "
+                  >База отдыха Дон на карте Волгоградской области — Яндекс Карты</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="food">
+          <div class="container">
+            <div class="row"><h2 class="text-uppercase text-center">питание на нашей базе отдыха</h2></div>
+            <div class="row food-content mt-5">
+              <div class="col-12">
+                <p class="">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero explicabo necessitatibus neque nostrum,
+                  architecto quas soluta ab quo accusamus laudantium eius blanditiis commodi nam velit iusto pariatur,
+                  tempore veniam. Veritatis. Ratione ipsum esse explicabo repellendus numquam sequi, quos ut ducimus
+                  hic, animi modi totam aliquam vel nesciunt et, quaerat voluptatibus sint minus maiores iste quisquam.
+                  Maxime atque deserunt nemo voluptates.
+                </p>
+                <a class="btn btn-link" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bathhouse">
+          <div class="container">
+            <div class="row"><h2 class="text-uppercase text-center">у нас есть баня</h2></div>
+            <div class="row bathhouse-content mt-5">
+              <div class="col-12">
+                <p class="">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero explicabo necessitatibus neque nostrum,
+                  architecto quas soluta ab quo accusamus laudantium eius blanditiis commodi nam velit iusto pariatur,
+                  tempore veniam. Veritatis. Ratione ipsum esse explicabo repellendus numquam sequi, quos ut ducimus
+                  hic, animi modi totam aliquam vel nesciunt et, quaerat voluptatibus sint minus maiores iste quisquam.
+                  Maxime atque deserunt nemo voluptates.
+                </p>
+                <a class="btn btn-link" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="banner-section">
+          <div class="container-fluid banner">
+            <div class="row"><h2 class="text-uppercase text-center d-none">баннер Забронировать</h2></div>
+            <div class="row">
+              <div
+                class="col-9 banner__content d-flex align-items-center justify-content-center flex-column m-auto pt-3 pb-4">
+                <h3 class="text-uppercase text-center">
+                  приезжайте<br />
+                  на базу отдыха <span class="fw-bolder">"дон"</span>
+                </h3>
+                <a class="btn btn-outline-warning btn-body fw-medium rounded-1 mt-3 btn-header" href="#">
+                  Бронировать
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="services" id="services">
+          <div class="container">
+            <div class="row"><h2 class="text-uppercase text-center">есть чем заняться</h2></div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 justify-content-center mt-5">
+              <div class="col scroll-items">
+                <div class="card">
+                  <img src="img/services/bike.png" />
+                  <div class="card-body">
+                    <h5 class="card-title fs-4">Велосипеды <span>от 300 ₽ </span></h5>
+                    <p class="card-text">Арендуйте велосипед и катайтесь среди деревьев</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col scroll-items">
+                <div class="card">
+                  <img src="img/services/tennis.png" />
+                  <div class="card-body">
+                    <h5 class="card-title fs-4">Теннис <span>от 100 ₽ </span></h5>
+                    <p class="card-text"></p>
+                    <div class="d-flex justify-content-between align-items-center mt-3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col scroll-items">
+                <div class="card">
+                  <img src="img/services/foorball.jpg" />
+                  <div class="card-body">
+                    <h5 class="card-title fs-4">Футбол <span>бесплатно</span></h5>
+                    <p class="card-text">Футбольное поле для игры на свежем воздухе</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col scroll-items">
+                <div class="card">
+                  <img class="grill-img" src="img/services/grill.webp" />
+                  <div class="card-body">
+                    <h5 class="card-title fs-4">Мангалы <span>бесплатно</span></h5>
+                    <p class="card-text">
+                      Около каждого коттеджа или номера оборудован мангал, на котором можно готовить
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center mt-3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col scroll-items">
+                <div class="card">
+                  <img class="fishing-huntsman-img" src="img/services/fishing-huntsman.webp" />
+                  <div class="card-body">
+                    <h5 class="card-title fs-4">Рыбалка с Егерем <span>от 1000 ₽</span></h5>
+                    <p class="card-text">
+                      Профессиональный егерь проведет вас по лучшим местам для рыбалки, хороший улов обеспечен
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center mt-3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col scroll-items">
+                <div class="card">
+                  <img class="fishing-img" src="img/services/fishing.jpg" />
+                  <div class="card-body">
+                    <h5 class="card-title fs-4">Рыбалка <span>бесплатно</span></h5>
+                    <p class="card-text">
+                      Желающие могут отправиться на рыбалку, все необходимое для рыбалки можно арендовать у нас!
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center mt-3" id="services-bootom"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="container" id="map">
+            <div class="row"><h2 class="text-uppercase text-center">как к нам проехать</h2></div>
+            <div class="row mt-5 map scroll-items">
+              <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center pt-3 pb-3 map-contacts">
+                <div class="map-contacts__info">
+                  <h3 class="">На авто</h3>
+                  <p>
+                    После поворота на х.Вертячий, спускаемся по грунтовой дороге в сторону дона, мимо частных домов,
+                    вскоре появятся турбазы, двигаясь вдоль них вы приедете к нашей турбазе.
+                  </p>
+                  <h3>На автобусе</h3>
+                  <p>
+                    На автовокзале Волгограда садимся на автобус «Волгоград-Песковатка» и выходим на хуторе Вертячий.
+                  </p>
+                  <a
+                    class="route-link d-flex align-items-center justify-content-center shadow"
+                    href="https://yandex.ru/maps/?rtext=~48.954607,43.869264"
+                    target="_blank"
+                    ><lord-icon
+                      src="https://cdn.lordicon.com/iikoxwld.json"
+                      trigger="loop"
+                      delay="1500"
+                      state="loop-roll"
+                      colors="primary:#e83a30"
+                      style="width: 50px; height: 50px; display: block">
+                    </lord-icon>
+                    Построить маршрут</a
+                  >
+                </div>
+              </div>
+              <div class="col-12 col-lg-8 px-0 position-relative route-map">
+                <img class="position-absolute" src="img/route-map.png" pip="false" alt="" />
+                <!-- <a
+                  class="position-absolute d-flex align-items-center shadow"
+                  href="https://yandex.ru/maps/?rtext=~48.954607,43.869264"
+                  target="_blank"
+                  ><lord-icon
+                    src="https://cdn.lordicon.com/iikoxwld.json"
+                    trigger="loop"
+                    delay="1500"
+                    state="loop-roll"
+                    colors="primary:#e83a30"
+                    style="width: 50px; height: 50px; display: block">
+                  </lord-icon>
+                  построить маршрут</a
+                > -->
+              </div>
+            </div>
+          </div>
         </section>
         <section>
           <div class="container">
-            <div class="row"><h2 class="text-uppercase text-center">О нас</h2></div>
+            <div class="row"><h2 class="text-uppercase text-center">контакты</h2></div>
+            <div class="row map px-0 mt-5 scroll-items">
+              <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center pt-3 pt-lg-0 map-contacts">
+                <div class="map-contacts__info">
+                  <h3>База отдыха Дон</h3>
+                  <a class="my-2 map-contacts__phone-link" href="tel:+79023621179"
+                    ><i class="bi-telephone-fill me-2"></i>8(902) 362-11-79</a
+                  >
+                  <p>turbazadon@mail.ru</p>
+                  <p>Адрес: Волгоградская область, Городищенский район, хутор Вертячий. 48.954607, 43.869264</p>
+                  <p class="map-contacts__info__socials">
+                    <a target="_blank" href=""><i class="fa-brands fa-vk"></i></a>
+                    <a target="_blank" href=""><i class="bi bi-youtube"></i></a>
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-8 px-0">
+                <script
+                  type="text/javascript"
+                  charset="utf-8"
+                  async
+                  src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af26a45cdb1240206e98b97882b898129ca07f5fe81458348a1c97e36a886b899&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+              </div>
+            </div>
           </div>
-        </section> -->
+        </section>
       </main>
       <footer class="footer pt-3">
         <div class="container">
@@ -491,10 +831,10 @@
                   <h3>Главная</h3>
                 </a>
                 <ul>
-                  <li><a href="#our-courses">О нас</a></li>
-                  <li><a href="#about-us">Проживание</a></li>
-                  <li><a href="contacts.html">Услуги</a></li>
-                  <li><a href="docs.html">Кафе-бар</a></li>
+                  <li><a href="#about">О нас</a></li>
+                  <li><a href="https://база-отдыха-дон.рф/domiki-do-3#do3k" target="_blank">Проживание</a></li>
+                  <li><a href="#services">Услуги</a></li>
+                  <li><a href="#">Кафе-бар</a></li>
                 </ul>
               </div>
             </div>
@@ -537,24 +877,17 @@
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="row freepik" style="display: none;">
-            <div class="col-12 flex-column d-flex align-items-end freepic mt-3">
-              <a href="https://ru.freepik.com/free-psd/leisure-and-wildlife-landing-page_13515931.htm"
-                >designed by freepik</a
-              >
-            </div>
-          </div>
-        </div>
       </footer>
     </wrapper>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
