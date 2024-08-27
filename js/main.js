@@ -1,3 +1,71 @@
+const tlLoader = gsap.timeline()
+tlLoader
+  .set('.loader', { yPercent: -100 })
+  .set('header h1', { y: '100%', opacity: 0 })
+  .set('.header__text__anim', { y: '100%', opacity: 0 })
+  .set('.header__content a', { y: '100%', opacity: 0 })
+  .set('.header-socials-block', { y: '150%', opacity: 0 })
+  .set('.header__video__container', { y: '-100%' })
+  .set('.header__video__bg', { y: '100%' })
+  .set('.navbar-id', { y: '-100%' })
+  .to('.loader', {
+    yPercent: 0,
+    duration: 0.1,
+  })
+  .to('.loader', {
+    delay: 1,
+    yPercent: -100,
+    duration: 0,
+  })
+
+  .to('header h1', {
+    delay: 1,
+    y: 0,
+    opacity: 1,
+    duration: 1,
+  })
+
+  .to(
+    '.header__text__anim',
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+    },
+    '-=0.2',
+  )
+  .to(
+    '.header__content a',
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: 'power4.out',
+    },
+    '-=0.2',
+  )
+  .to(
+    '.header-socials-block',
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+    },
+    '<',
+  )
+
+  .to('.header__video__container', {
+    y: 0,
+    duration: 1,
+  })
+  .to('.header__video__bg', {
+    y: 0,
+    duration: 1,
+  })
+  .to('.navbar-id', {
+    y: 0,
+    duration: 1.5,
+  })
 // анимация header
 gsap.registerPlugin(TextPlugin, ScrollTrigger)
 const tl = gsap.timeline({
@@ -11,38 +79,41 @@ tl.to('.text', {
     value: '70 км от центра города',
   },
 })
-tl.to('.text', {
-  duration: 1,
-  delay: 2,
-  text: {
-    value: 'Рыбалка с егерем',
-  },
-})
-tl.to('.text', {
-  duration: 1,
-  delay: 2,
-  text: {
-    value: 'Скидки постоянным клиентам ',
-  },
-})
+  .to('.text', {
+    duration: 1,
+    delay: 2,
+    text: {
+      value: 'Рыбалка с егерем',
+    },
+  })
+  .to('.text', {
+    duration: 1,
+    delay: 2,
+    text: {
+      value: 'Скидки постоянным клиентам ',
+    },
+  })
 // ------------------------------------
-const tl2 = gsap.timeline({
-  delay: 3,
-})
+// loader
 
-tl2.from('.header__video__container', {
-  duration: 1,
-  y: '-100%',
-})
-tl2.from('.header__video__bg', {
-  duration: 1.5,
-  y: '100%',
-  ease: 'power4.out',
-})
-tl2.from('.navbar-id', {
-  duration: 1,
-  y: '-100%',
-})
+// loader-end
+// const tl2 = gsap.timeline({
+//   delay: 3,
+// })
+
+// tl2
+//   .from('.header__video__container', {
+//     duration: 1,
+//     y: '-100%',
+//   })
+//   .from('.header__video__bg', {
+//     duration: 1.5,
+//     y: '100%',
+//   })
+//   .from('.navbar-id', {
+//     duration: 1,
+//     y: '-100%',
+//   })
 // ------------------------------------
 // gsap.to(".header__video__container", {
 // 	scrollTrigger: {
@@ -91,7 +162,7 @@ tl3
   .to('.header__content', {
     scrollTrigger: {
       trigger: 'header',
-      scrub: 1,
+      scrub: true,
       start: '5% top',
     },
     scale: 0.05,
@@ -147,7 +218,7 @@ document.querySelectorAll('.text-id').forEach(e => {
 // 	})
 // })
 
-// Initialize Swiper
+// swiper-rooms
 var swiperRooms = new Swiper('.swiper-rooms', {
   effect: 'flip',
   grabCursor: true,
@@ -169,11 +240,11 @@ var swiperSale = new Swiper('.swiper-sale', {
     clickable: true,
   },
   autoplay: {
-    delay: 1000,
+    delay: 10,
   },
   loop: true,
   grabCursor: true,
-  speed: 6000,
+  speed: 4000,
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -186,11 +257,26 @@ var swiperSale = new Swiper('.swiper-sale', {
     },
   },
 })
-// ----------
+// ----------анимация при скролле-------------
+const navbar = document.querySelector('.navbar-id')
+const header = document.querySelector('.header')
+const navbarHeight = navbar.offsetHeight
+const headerHeight = header.offsetHeight
 
 window.addEventListener('scroll', () => {
   const scrollItems = document.querySelectorAll('.scroll-items')
+  const banner = document.querySelector('.banner')
   const scrollAnimation = () => {
+    // navbar-animation
+    let scrollDistance = window.scrollY
+    if (scrollDistance >= headerHeight / 10) {
+      navbar.classList.add('navbar-id-active')
+    } else {
+      navbar.classList.remove('navbar-id-active')
+    }
+    // navbar-animation-end
+
+    // scroll-items
     let windowCenter = window.innerHeight / 2 + window.scrollY
     scrollItems.forEach(el => {
       let scrollOffset = el.getBoundingClientRect().top - 400 + window.scrollY
@@ -200,7 +286,30 @@ window.addEventListener('scroll', () => {
         el.classList.remove('box-active')
       }
     })
+    // scroll-items-end
+
+    // banner
+    let scrollOffset1 = banner.getBoundingClientRect().top - 200 + window.scrollY
+    if (scrollOffset1 <= windowCenter) {
+      banner.classList.add('banner-active')
+    } else {
+      banner.classList.remove('banner-active')
+    }
+    // banner-end
   }
   scrollAnimation()
 })
+// ----------анимация при скролле-end-------------
 
+// -------------скрытие меню при клике на ссылку----------------
+const navLinks = document.querySelectorAll('.nav-item')
+const menuToggle = document.getElementById('navbarNav')
+const bsCollapse = bootstrap.Collapse.getOrCreateInstance(menuToggle, {
+  toggle: false,
+})
+navLinks.forEach(l => {
+  l.addEventListener('click', () => {
+    bsCollapse.toggle()
+  })
+})
+// ---------------/*-скрытие меню при клике на ссылку-------------

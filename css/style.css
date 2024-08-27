@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   --color-text-header: #fdfefe;
-  --color-1: #fbab02;
+  --color-1: #fbab01;
   --color-hover: rgb(17, 46, 47);
   /* --box-shadow-1: 5px 5px 15px -5px rgb(116, 102, 102); */
   --index: calc(1vw + 1vh);
-  --border-color: #397277;
+  --border-color: #205357;
 }
 
 * {
@@ -18,8 +18,33 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: var(--color-text-header);
 }
+.btn-link {
+  font-weight: 600;
+  color: var(--color-hover);
+  padding: 10px calc(var(--index) * 0.5);
+  background-color: var(--color-1);
+  transition: all 0.5s;
+  text-decoration: none;
+}
+/* loader */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../img/header-bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1000;
+}
+/* loader-end */
 footer {
-  background-color: rgb(57, 114, 119);
+  background-color: var(--border-color);
 }
 
 h1 {
@@ -53,9 +78,11 @@ h1 {
 .navbar {
   padding: 15px;
 }
-.navbar-collapse,
-nav .container-fluid {
-  background: #397277;
+.navbar-id {
+  transition: all 0.3s;
+}
+.navbar-collapse {
+  background: var(--border-color);
 }
 .navbar-brand {
   font-size: calc(var(--index));
@@ -146,7 +173,8 @@ nav .container-fluid {
   transition: all 0.5s;
 }
 
-.btn-body:before {
+.btn-body:before,
+.route-link:before {
   content: '';
   width: 100%;
   height: 200%;
@@ -183,7 +211,7 @@ nav .container-fluid {
 
 /* navbar-end */
 header {
-  background-image: url('../img/5269387.jpg');
+  background-image: url('../img/header-bg.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -194,6 +222,7 @@ header {
 
 .header__content {
   line-height: 1;
+  transition: all 0.5s;
 }
 .header-socials-block {
   top: 90%;
@@ -214,12 +243,12 @@ header {
 	animation: ani 1.5s forwards;
 	animation-delay: 1s;
 } */
-header h1 {
+/* header h1 {
   opacity: 0;
   transform: translateY(150%);
   animation: ani 1.5s forwards;
-  animation-delay: 1.5s;
-}
+  animation-delay: 2s;
+} */
 .header-active {
   position: absolute;
   margin-left: auto;
@@ -229,18 +258,18 @@ header h1 {
   text-align: center;
   z-index: 5;
 }
-.header__text__anim {
+/* .header__text__anim {
   opacity: 0;
   transform: translateY(150%);
   animation: ani 1.5s forwards;
-  animation-delay: 2s;
+  animation-delay: 2.5s;
 }
 .header__content a,
 .header-socials-block {
   opacity: 0;
   transform: translateY(150%);
   animation: ani 1.5s forwards;
-  animation-delay: 2s;
+  animation-delay: 2.5s;
 }
 @keyframes ani {
   0% {
@@ -251,16 +280,8 @@ header h1 {
     transform: translateY(0);
     opacity: 1;
   }
-}
+} */
 
-/* .carousel {
-	opacity: 0;
-
-	transform: translateY(150%);
-	animation: ani 1.5s forwards;
-
-	animation-delay: 2s;
-}
 /* animation-header-end */
 /* header-end */
 
@@ -269,7 +290,6 @@ header h1 {
 /* parallax */
 main {
   position: relative;
-  background-image: url('../img/main-bg1.jpeg');
 }
 
 main:before {
@@ -281,7 +301,7 @@ main:before {
   left: 0;
   opacity: 1;
   filter: blur;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.7);
   z-index: -1;
 }
 /* parallax-end */
@@ -357,8 +377,8 @@ section {
   opacity: 1;
   filter: blur;
   background: rgba(58, 115, 120, 0);
-  background: -webkit-linear-gradient(0deg, rgba(58, 115, 120, 0) 0%, #397277 100%);
-  background: linear-gradient(0deg, rgba(58, 115, 120, 0) 0%, #397277 100%);
+  background: -webkit-linear-gradient(0deg, rgba(58, 115, 120, 0) 0%, var(--border-color) 100%);
+  background: linear-gradient(0deg, rgba(58, 115, 120, 0) 0%, var(--border-color) 100%);
   z-index: -1;
 }
 .our-advantages .card-text span {
@@ -452,24 +472,252 @@ section {
 
 /* swiper-rooms-end */
 .card-body-rooms {
-  background-image: url('../img/5269387.jpg');
+  background-image: url('../img/header-bg.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-top: 15px solid var(--border-color);
 }
-.btn-card-rooms {
-  font-weight: 600;
-  color: var(--color-hover);
-  padding: 10px calc(var(--index) * 0.5);
-  background-color: var(--color-1);
-  transition: all 0.5s;
-}
+
 .btn-more {
   color: var(--color-1);
 }
-/* ---услуги--- */
-/* ---услуги-end-- */
+
+/* о нас */
+.about p {
+  text-align: justify;
+}
+/* ---gallery-about---------------- */
+.grid-gallery-about {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 420px;
+  grid-auto-flow: dense;
+  grid-gap: 20px;
+}
+.grid-gallery-about .grid-item {
+  position: relative;
+  /* background-color: var(--border-color); */
+  border: 1px solid rgba(255, 255, 255, 0.725);
+  overflow: hidden;
+  /* padding: 3px; */
+  border-radius: 3px;
+}
+.grid-gallery-about .grid-item img {
+  width: 100%;
+  height: 100%;
+  object-position: 50% 50%;
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.grid-gallery-about .grid-item:hover img {
+  transform: scale(1.1);
+}
+.grid-gallery-about .grid-item a {
+  cursor: zoom-in;
+}
+.lb-close {
+  background-image: url('../img/lightbox/close.png') !important;
+}
+.lb-next {
+  background-image: url('../img/lightbox/next.png') !important;
+  opacity: 1 !important;
+}
+.lb-prev {
+  background-image: url('../img/lightbox/prev.png') !important;
+  opacity: 1 !important;
+}
+.grid-gallery-about .grid-item:nth-child(3n - 2) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.grid-item {
+  border-radius: 14px;
+  border: 1px solid var(--color-text-header);
+}
+@media (max-width: 768px) {
+  .grid-gallery-about {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 520px;
+    grid-row: span 1;
+  }
+  .grid-gallery-about .grid-item:nth-child(3n - 2) {
+    grid-column: unset;
+    grid-row: unset;
+  }
+}
+/* --/*gallery-about-end---------------- */
+.reviews {
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.725);
+}
+/* о нас-end */
+
+/* food */
+.food-content p {
+  text-align: justify;
+}
+/* food-end */
+
+/* bathhouse */
+.bathhouse-content p {
+  text-align: justify;
+}
+/* bathhouse-end */
+
+/* banner */
+.banner-section {
+  overflow: hidden;
+}
+.banner {
+  color: var(--color-text-header);
+  backdrop-filter: blur(4px) saturate(200%);
+  -webkit-backdrop-filter: blur(4px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.47);
+  border-radius: 3px;
+  border-top: 1px solid rgba(255, 255, 255, 0.725);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.725);
+  background-image: url('../img/header-bg.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: translateX(-100%);
+}
+.banner__content h3 {
+  line-height: 1.5;
+}
+.banner-active {
+  transform: translateX(0%);
+  transition: transform 1s;
+  animation: bannerAnim 2s ease 2s infinite normal forwards;
+  opacity: 1;
+}
+@keyframes bannerAnim {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(1.05);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(1.05);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(1.05);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+/* banner-end */
+
+/* services */
+.services .card {
+  height: 30rem;
+}
+.services .card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.grill-img {
+  object-position: top right;
+}
+.fishing-huntsman-img {
+  object-position: top;
+}
+.fishing-img {
+  object-position: center;
+}
+.services .card span {
+  color: var(--color-1);
+  font-weight: 600;
+}
+/* services-end */
+
+/* map, contacts */
+
+.route-map {
+  min-height: calc(var(--index) * 15);
+  /* background: url('../img/route-map.png') no-repeat;
+  background-size: cover;
+  background-position: center; */
+  & img {
+    width: 100%;
+    height: 100%;
+    object-position: 50% 50%;
+    object-fit: cover;
+  }
+  & a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--border-color);
+    font-weight: 400;
+    font-size: 1.2rem;
+    z-index: 5;
+    bottom: 5%;
+    left: 5%;
+    background: var(--color-1);
+    padding-right: 1rem;
+    border-radius: 3px;
+  }
+}
+
+.route-link {
+  color: var(--color-text-header);
+  font-weight: 600;
+  padding-right: 1rem;
+  border-radius: 3px;
+  border: 2px solid var(--color-1);
+  text-decoration: none;
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.map {
+  border: 1px solid rgba(255, 255, 255, 0.725);
+  border-radius: 3px;
+  margin: 0;
+}
+.map-contacts {
+  backdrop-filter: blur(10px) saturate(200%);
+  -webkit-backdrop-filter: blur(4px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.47);
+  & h3 {
+    color: var(--color-1);
+  }
+  & p {
+    text-align: justify;
+  }
+}
+.map-contacts__phone-link {
+  text-decoration: none;
+  color: var(--color-text-header);
+}
+.map-contacts__info__socials a {
+  font-size: 30px;
+  margin-right: 10px;
+  color: var(--color-text-header);
+}
+/* map, contacts-end */
 /* ---------main-end------- */
 
 /* footer */
@@ -479,6 +727,7 @@ footer a {
 }
 footer ul {
   list-style: none;
+  padding: 0;
 }
 footer .letter {
   text-shadow: 25px 0 35px rgba(0, 0, 0, 0.6);
@@ -495,13 +744,16 @@ footer .letter {
   color: var(--color-1);
 }
 .socials a {
-  font-size: 40px;
+  font-size: 30px;
   margin-right: 10px;
 }
 /* footer-end */
 
 /* media-css */
 @media (max-width: 1200px) {
+  .navbar-id {
+    background-color: var(--border-color);
+  }
   .navbar-id ul {
     display: flex;
     align-items: center;
@@ -551,7 +803,7 @@ footer .letter {
     top: 0;
     left: 0;
     opacity: 1;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
 }
@@ -575,6 +827,16 @@ footer .letter {
   footer .letter {
     font-size: calc(var(--index) * 4.5);
   }
+
+  .grill-img {
+    object-position: right;
+  }
+  .fishing-huntsman-img {
+    object-position: top;
+  }
+  .fishing-img {
+    object-position: bottom;
+  }
 }
 @media (min-width: 1200px) {
   .phone-link-navbar-brand {
@@ -591,9 +853,10 @@ footer .letter {
     background-color: var(--color-1);
     color: var(--color-hover);
   }
-  .btn-card-rooms:hover {
+  .btn-link:hover {
     border: 1px solid #fbab02;
     background: var(--border-color);
+    color: var(--color-text-header);
   }
 
   .nav-link:hover {
@@ -634,6 +897,17 @@ footer .letter {
   .btn-more:not(:hover) {
     transition: all 0.5s ease-in-out;
   }
+  .map:hover {
+    scale: 1.02;
+    transition: all 0.5s;
+    & .map-contacts {
+      background: var(--border-color);
+      transition: all 0.5s;
+    }
+  }
+  .map:not(:hover) {
+    transition: all 0.5s;
+  }
 }
 
 @media (hover: none) {
@@ -647,12 +921,22 @@ footer .letter {
   .header-socials-block a:active {
     transform: scale(2);
   }
-  .btn-card-rooms:active {
+  .btn-link:active {
     border: 1px solid #fbab02;
     background: var(--border-color);
   }
   .our-advantages .card:hover {
     scale: 1.02;
+    transition: all 0.5s ease-in-out;
+  }
+  .map:active,
+  .services .card:active {
+    scale: 1.02;
+    transition: all 0.5s ease-in-out;
+    background: var(--border-color);
+  }
+  map:not(:active),
+  .services .card:not(:active) {
     transition: all 0.5s ease-in-out;
   }
 }
@@ -677,7 +961,7 @@ main span {
 .scroll-items {
   opacity: 0;
   transform: translateY(250px);
-  transition: opacity .5s, transform 1.5s;
+  transition: opacity 0.5s, transform 1s;
 }
 .box-active {
   transform: translateY(0);
