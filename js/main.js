@@ -257,6 +257,24 @@ var swiperSale = new Swiper('.swiper-sale', {
     },
   },
 })
+// swiper-about
+var swiper = new Swiper('.swiper-about', {
+  spaceBetween: 30,
+  effect: 'fade',
+  autoplay: {
+    delay: 1000,
+  },
+  loop: true,
+  speed: 1000,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination-about',
+    clickable: true,
+  },
+})
 // ----------анимация при скролле-------------
 const navbar = document.querySelector('.navbar-id')
 const header = document.querySelector('.header')
