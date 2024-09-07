@@ -6,6 +6,8 @@
   /* --box-shadow-1: 5px 5px 15px -5px rgb(116, 102, 102); */
   --index: calc(1vw + 1vh);
   --border-color: #205357;
+  --border-radius-1: 3px;
+  --border-1: 1px solid rgba(255, 255, 255, 0.725);
 }
 
 * {
@@ -459,15 +461,14 @@ section {
 .swiper-rooms .pagination-rooms {
   bottom: -18px;
 }
-.swiper-button-prev,
-.swiper-button-next {
+
+.button-next-rooms {
+  right: -35px;
   color: var(--color-1);
 }
-.swiper-button-next {
-  right: -35px;
-}
-.swiper-button-prev {
+.button-prev-rooms {
   left: -35px;
+  color: var(--color-1);
 }
 
 /* swiper-rooms-end */
@@ -487,6 +488,43 @@ section {
 .about p {
   text-align: justify;
 }
+
+/* swiper-about */
+
+.swiper-about {
+  width: 100%;
+  height: 80%;
+  border-radius: var(--border-radius-1);
+  border: var(--border-1);
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+.button-next-about,
+.button-prev-about {
+  right: 20px;
+  color: var(--border-color);
+  background: var(--color-1);
+  border-radius: var(--border-radius-1);
+  padding: 5px 15px;
+  font-size: 3px;
+}
+.swiper-pagination-about {
+  /* bottom: -30px !important; */
+}
+/* swiper-about-end */
+
 /* ---gallery-about---------------- */
 .grid-gallery-about {
   max-width: 100%;
@@ -559,12 +597,39 @@ section {
 /* о нас-end */
 
 /* food */
-.food-content p {
+.food__text {
   text-align: justify;
+}
+.food__text a,
+.link-food-sm {
+  color: var(--color-1);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: larger;
+}
+.food__img {
+  border-radius: var(--border-radius-1);
+  border: var(--border-1);
+}
+.food__bootom-line {
+  height: 2px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: var(--color-text-header);
+  margin-top: calc(var(--index) * 3);
 }
 /* food-end */
 
 /* bathhouse */
+.bathhouse-content {
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.725);
+  margin: 0 auto;
+  backdrop-filter: blur(10px) saturate(200%);
+  -webkit-backdrop-filter: blur(4px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.47);
+  align-items: center;
+}
 .bathhouse-content p {
   text-align: justify;
 }
@@ -588,8 +653,14 @@ section {
   background-size: cover;
   transform: translateX(-100%);
 }
-.banner__content h3 {
-  line-height: 1.5;
+.banner__content {
+  & h3 {
+    line-height: 1.5;
+  }
+  & span {
+    color: var(--color-1);
+    font-size: calc(var(--index) * 2);
+  }
 }
 .banner-active {
   transform: translateX(0%);
@@ -816,6 +887,9 @@ footer .letter {
       font-size: calc(var(--index) * 1.8);
     }
   }
+  .link-food-lg {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   .header__content .letter {
@@ -823,6 +897,11 @@ footer .letter {
   }
   .our-advantages .card-text span {
     font-size: calc(var(--index) * 2.5);
+  }
+  .banner__content {
+    & span {
+      font-size: calc(var(--index) * 3);
+    }
   }
   footer .letter {
     font-size: calc(var(--index) * 4.5);
@@ -837,9 +916,21 @@ footer .letter {
   .fishing-img {
     object-position: bottom;
   }
+  .button-next-about,
+  .button-prev-about {
+    display: none;
+  }
+  .swiper-about {
+    height: 100%;
+  }
 }
 @media (min-width: 1200px) {
   .phone-link-navbar-brand {
+    display: none;
+  }
+}
+@media (min-width: 991px) {
+  .link-food-sm {
     display: none;
   }
 }
@@ -897,16 +988,32 @@ footer .letter {
   .btn-more:not(:hover) {
     transition: all 0.5s ease-in-out;
   }
+  .food-content:hover {
+    background: var(--border-color);
+    scale: 1.05;
+    transition: all 0.5s ease-in-out;
+  }
+  .food-content:not(:hover) {
+    transition: all 0.5s ease-in-out;
+  }
+  .bathhouse-content:hover {
+    background: var(--border-color);
+    scale: 1.05;
+    transition: all 0.5s ease-in-out;
+  }
+  .bathhouse-content:not(:hover) {
+    transition: all 0.5s ease-in-out;
+  }
   .map:hover {
-    scale: 1.02;
-    transition: all 0.5s;
+    scale: 1.05;
+    transition: all 0.5s ease-in-out;
     & .map-contacts {
       background: var(--border-color);
-      transition: all 0.5s;
+      transition: all 0.5s ease-in-out;
     }
   }
   .map:not(:hover) {
-    transition: all 0.5s;
+    transition: all 0.5s ease-in-out;
   }
 }
 
@@ -929,12 +1036,16 @@ footer .letter {
     scale: 1.02;
     transition: all 0.5s ease-in-out;
   }
+  .food-content:active,
+  .bathhouse-content:active,
   .map:active,
   .services .card:active {
     scale: 1.02;
     transition: all 0.5s ease-in-out;
     background: var(--border-color);
   }
+  .food-content:not(:active),
+  .bathhouse-content:not(:active),
   map:not(:active),
   .services .card:not(:active) {
     transition: all 0.5s ease-in-out;
